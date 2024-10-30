@@ -26,3 +26,9 @@ variable "private_subnet_cidrs" {
   type        = list(string)
   default     = ["10.0.10.0/24", "10.0.11.0/24"]
 }
+
+variable "enable_nat_gateway" {
+  description = "NATゲートウェイを作成するかどうか"
+  type        = bool
+  default     = true
+}

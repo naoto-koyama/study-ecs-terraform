@@ -3,6 +3,12 @@ variable "prefix" {
   type        = string
 }
 
+variable "assign_public_ip" {
+  description = "Whether to assign public IP to the containers"
+  type        = bool
+  default     = false
+}
+
 variable "private_subnet_ids" {
   description = "Private Subnet IDs"
   type        = list(string)
