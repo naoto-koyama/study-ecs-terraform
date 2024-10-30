@@ -1,0 +1,10 @@
+services:
+  terraform:
+    image: hashicorp/terraform:1.5.7
+    volumes:
+      - .:/workspace
+      - ~/.aws:/root/.aws:ro
+    working_dir: /workspace/environments/${ENV:-dev}
+    environment:
+      - AWS_PROFILE=${AWS_PROFILE:-default}
+      - AWS_REGION=ap-northeast-1
